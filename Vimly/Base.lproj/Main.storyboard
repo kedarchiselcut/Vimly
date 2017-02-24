@@ -57,7 +57,7 @@
                                             <action selector="nextButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gez-bo-5Sz"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album 58" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="1tf-PA-6Zd">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album 58" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="1tf-PA-6Zd">
                                         <rect key="frame" x="157.66666666666669" y="12" width="100.00000000000006" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="fL2-8v-eIy"/>

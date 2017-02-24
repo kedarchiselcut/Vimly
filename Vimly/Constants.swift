@@ -11,3 +11,4 @@ import Foundation
 let pageKey = "page"
 let baseUrl = "http://vimeo.com/api/v2/"
 let methodName = "album/%d/videos.json"
+let cellHeight = 160
