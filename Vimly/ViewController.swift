@@ -14,6 +14,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet var videosTableView: UITableView!
     @IBOutlet var albumTitleLabel: UILabel!
+    @IBOutlet var nextButton: UIButton!
+    @IBOutlet var previousButton: UIButton!
     var videosArray: Array<Any>!
     var currentAlbumId: Int = 58
     var currentPageNumber: Int = 1
@@ -52,13 +54,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                     self.videosTableView.reloadData()
                 }
                 
+                
             case .failure(let error):
                 print(error)
             }
+            
+            self.nextButton.isUserInteractionEnabled = true
+            self.previousButton.isUserInteractionEnabled = true
         }
     }
     
     func setupVideosList() {
+        nextButton.isUserInteractionEnabled = false
+        previousButton.isUserInteractionEnabled = false
+        
         if (videosArray != nil) {
             videosArray.removeAll()
             videosTableView.reloadData()

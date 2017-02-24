@@ -94,6 +94,8 @@
                     </view>
                     <connections>
                         <outlet property="albumTitleLabel" destination="1tf-PA-6Zd" id="45u-I1-EA1"/>
+                        <outlet property="nextButton" destination="h2O-QH-XIn" id="dcl-Pa-tqS"/>
+                        <outlet property="previousButton" destination="ebQ-g3-Gkl" id="fhQ-MS-Ap1"/>
                         <outlet property="videosTableView" destination="2bf-O3-PvX" id="vHT-GS-DC2"/>
                     </connections>
                 </viewController>
