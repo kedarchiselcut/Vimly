@@ -9,7 +9,10 @@
 import UIKit
 import Alamofire
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet var videosTableView: UITableView!
+    @IBOutlet var albumTitleLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,5 +39,32 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    // MARK: UITableViewDataSource
+    
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell.init()
+    }
+    
+    // MARK: UITableViewDelegate
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    
+    //MARK: Action methods
+    
+    @IBAction func nextButtonTapped() {
+        
+    }
+    
+    @IBAction func previousButtonTapped() {
+        
+    }
+
 }
 
