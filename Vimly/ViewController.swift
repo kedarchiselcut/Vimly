@@ -18,14 +18,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var currentAlbumId: Int = 58
     var currentPageNumber: Int = 1
     var selectedRowIndex: Int = -1
-    var rowHeight: CGFloat = CGFloat(benchmarkHeight)
+    var selectedRowDescriptionHeight: CGFloat = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let screenSize: CGRect = UIScreen.main.bounds
-
-        rowHeight = screenSize.width*CGFloat(benchmarkHeight/benchmarkScreenWidth)
         setupVideosList()
         
         let cellNib = UINib(nibName: "VideoTableViewCell", bundle: nil)
@@ -50,6 +47,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 } else {
                     self.videosArray = response.result.value as! Array<Any>
                 }
+                print(self.videosArray)
                 
                 if ((response.result.value as! Array<Any>).count > 0) {
                     self.videosTableView.reloadData()
@@ -80,8 +78,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         setupCellImage(forImageView: videoCell.videoThumbnailImage, withUrl: videoObject[videoThumbnailKey] as! String, andPlaceholder: UIImage(named: "placeholder-video.png")!)
         setupCellImage(forImageView: videoCell.userThumbnailImage, withUrl: videoObject[userThumbnailKey] as! String, andPlaceholder: UIImage(named: "placeholder-profile.png")!)
+        
         videoCell.userThumbnailImage.layoutIfNeeded()
         videoCell.userThumbnailImage.layer.cornerRadius = videoCell.userThumbnailImage.frame.size.height/2
+        
+        videoCell.descriptionLabel.text = videoObject[descriptionKey] as? String
+        videoCell.layoutIfNeeded()
         
         videoCell.selectionStyle = UITableViewCellSelectionStyle.none
     }
@@ -127,8 +129,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // MARK: UITableViewDelegate
     
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let screenSize: CGRect = UIScreen.main.bounds
+        let rowHeight: CGFloat = screenSize.width*CGFloat(benchmarkHeight/benchmarkScreenWidth)
+
         if indexPath.row == selectedRowIndex {
-            return rowHeight*2
+            return rowHeight + selectedRowDescriptionHeight + 2*CGFloat(descriptionLabelMargin)
         }
         return rowHeight
     }
@@ -139,6 +144,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         } else {
             selectedRowIndex = -1
         }
+        
+        //Not the best way to do this?
+        let selectedCell: VideoTableViewCell = videosTableView.cellForRow(at: indexPath) as! VideoTableViewCell
+        selectedRowDescriptionHeight = selectedCell.descriptionHeight
         
         videosTableView.beginUpdates()
         videosTableView.endUpdates()
