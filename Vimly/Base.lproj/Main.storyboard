@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,11 +18,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2bf-O3-PvX">
-                                <rect key="frame" x="0.0" y="20" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="672"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -31,29 +31,38 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nBn-rg-j6N">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="692" width="414" height="44"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebQ-g3-Gkl">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebQ-g3-Gkl">
                                         <rect key="frame" x="8" y="7" width="59" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="59" id="h41-8o-3FN"/>
+                                            <constraint firstAttribute="height" constant="30" id="pOa-cB-YR2"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                         <state key="normal" title="Previous"/>
                                         <connections>
                                             <action selector="previousButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="dku-Zg-PTT"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2O-QH-XIn">
-                                        <rect key="frame" x="335" y="7" width="32" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2O-QH-XIn">
+                                        <rect key="frame" x="374" y="7" width="32" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="GP4-Y4-U36"/>
+                                            <constraint firstAttribute="height" constant="30" id="Tfa-v3-9gu"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                         <state key="normal" title="Next"/>
                                         <connections>
                                             <action selector="nextButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gez-bo-5Sz"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Album 58" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="1tf-PA-6Zd">
-                                        <rect key="frame" x="138" y="12" width="100" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album 58" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="1tf-PA-6Zd">
+                                        <rect key="frame" x="157.66666666666669" y="12" width="100.00000000000006" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="fL2-8v-eIy"/>
+                                            <constraint firstAttribute="width" constant="100" id="uG7-we-ktt"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -61,7 +70,13 @@
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="h2O-QH-XIn" secondAttribute="trailing" constant="8" id="8cV-ng-N2I"/>
+                                    <constraint firstItem="1tf-PA-6Zd" firstAttribute="centerX" secondItem="nBn-rg-j6N" secondAttribute="centerX" id="F6K-Zb-pYg"/>
                                     <constraint firstAttribute="height" constant="44" id="IJO-ko-VJk"/>
+                                    <constraint firstAttribute="bottom" secondItem="ebQ-g3-Gkl" secondAttribute="bottom" constant="7" id="KiG-AT-tpT"/>
+                                    <constraint firstAttribute="bottom" secondItem="h2O-QH-XIn" secondAttribute="bottom" constant="7" id="W17-kN-ZEO"/>
+                                    <constraint firstItem="1tf-PA-6Zd" firstAttribute="centerY" secondItem="nBn-rg-j6N" secondAttribute="centerY" id="oA9-RM-bje"/>
+                                    <constraint firstItem="ebQ-g3-Gkl" firstAttribute="leading" secondItem="nBn-rg-j6N" secondAttribute="leading" constant="8" id="qpf-1F-hIp"/>
                                 </constraints>
                             </view>
                         </subviews>

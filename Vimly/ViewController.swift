@@ -13,6 +13,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet var videosTableView: UITableView!
     @IBOutlet var albumTitleLabel: UILabel!
+    var videosArray: Array<Any>!
+    var currentAlbumId: Int = 58
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,15 +26,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Dispose of any resources that can be recreated.
     }
 
-    func getVideos(albumId: Int, pageNumber: Int) {
+    func getVideos(pageNumber: Int) {
         let parameters = ["page": pageNumber]
-        let urlString = String(format: "http://vimeo.com/api/v2/album/%d/videos.json?page=%d", albumId, pageNumber)
+        let urlString = String(format: "http://vimeo.com/api/v2/album/%d/videos.json", currentAlbumId)
         
         Alamofire.request(urlString, parameters: parameters).validate().responseJSON { response in
             switch response.result {
             case .success:
-                let videosArray: Array<Any> = response.result.value as! Array<Any>
-                print(videosArray)
+                self.videosArray = response.result.value as! Array<Any>
+                print(self.videosArray)
                 
             case .failure(let error):
                 print(error)
@@ -59,12 +61,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     //MARK: Action methods
     
     @IBAction func nextButtonTapped() {
-        
+        videosArray.removeAll()
+        currentAlbumId += 1
     }
     
     @IBAction func previousButtonTapped() {
-        
+        videosArray.removeAll()
+        if currentAlbumId > 1 {
+            currentAlbumId -= 1
+        }
     }
-
+    
 }
 
