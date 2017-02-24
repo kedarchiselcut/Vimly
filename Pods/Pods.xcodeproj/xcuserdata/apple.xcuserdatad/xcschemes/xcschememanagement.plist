@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>AlamofireImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Vimly.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,12 +42,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F4FDF37CC6198F8DE75C66705FAE926F</key>
+		<key>9A3C5B61B55CF9B2417D87C26FC1DACC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FE003224951B506EF6A03D23109723F5</key>
+		<key>9EFE4C70245EE2857D336B8B9FA4E825</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F4FDF37CC6198F8DE75C66705FAE926F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

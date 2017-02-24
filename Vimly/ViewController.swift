@@ -15,10 +15,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet var albumTitleLabel: UILabel!
     var videosArray: Array<Any>!
     var currentAlbumId: Int = 58
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        getVideos(pageNumber: 1)
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,8 +28,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
     func getVideos(pageNumber: Int) {
-        let parameters = ["page": pageNumber]
-        let urlString = String(format: "http://vimeo.com/api/v2/album/%d/videos.json", currentAlbumId)
+        let parameters = [pageKey: pageNumber]
+        let urlString = String(format: baseUrl + methodName, currentAlbumId)
         
         Alamofire.request(urlString, parameters: parameters).validate().responseJSON { response in
             switch response.result {
