@@ -17,4 +17,6 @@ let videoThumbnailKey = "thumbnail_large"
 let userThumbnailKey = "user_portrait_medium"
 let usernameKey = "user_name"
 let uploadDateKey = "upload_date"
-let cellHeight = 160
+let benchmarkHeight = 148
+let benchmarkScreenWidth = 414
+let heightRatio = benchmarkHeight/benchmarkScreenWidth

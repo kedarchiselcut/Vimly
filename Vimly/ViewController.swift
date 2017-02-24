@@ -17,11 +17,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var videosArray: Array<Any>!
     var currentAlbumId: Int = 58
     var currentPageNumber: Int = 1
-        
+    var selectedRowIndex: Int = -1
+    var rowHeight: CGFloat = CGFloat(benchmarkHeight)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        setupScreen()
+        setupVideosList()
         
         let cellNib = UINib(nibName: "VideoTableViewCell", bundle: nil)
         videosTableView.register(cellNib, forCellReuseIdentifier: CellIdentifier)
@@ -55,12 +57,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     
-    func setupScreen() {
+    func setupVideosList() {
         if (videosArray != nil) {
             videosArray.removeAll()
             videosTableView.reloadData()
         }
         currentPageNumber = 1
+        selectedRowIndex = -1
 
         albumTitleLabel.text = String(format: "Album %d", currentAlbumId)
         getVideos()
@@ -73,6 +76,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         setupCellImage(forImageView: videoCell.videoThumbnailImage, withUrl: videoObject[videoThumbnailKey] as! String, andPlaceholder: UIImage(named: "placeholder-video.png")!)
         setupCellImage(forImageView: videoCell.userThumbnailImage, withUrl: videoObject[userThumbnailKey] as! String, andPlaceholder: UIImage(named: "placeholder-profile.png")!)
+        videoCell.userThumbnailImage.layoutIfNeeded()
+        videoCell.userThumbnailImage.layer.cornerRadius = videoCell.userThumbnailImage.frame.size.height/2
+        
+        videoCell.selectionStyle = UITableViewCellSelectionStyle.none
     }
     
     func setupCellImage(forImageView cellImageView: UIImageView, withUrl imageUrlString: String, andPlaceholder placeholderImage: UIImage) {
@@ -116,25 +123,35 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // MARK: UITableViewDelegate
     
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(cellHeight)
+        if indexPath.row == selectedRowIndex {
+            return rowHeight*2
+        }
+        return rowHeight
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row != selectedRowIndex {
+            selectedRowIndex = indexPath.row
+        } else {
+            selectedRowIndex = -1
+        }
         
+        videosTableView.beginUpdates()
+        videosTableView.endUpdates()
     }
     
     //MARK: Action methods
     
     @IBAction func nextButtonTapped() {
         currentAlbumId += 1
-        setupScreen()
+        setupVideosList()
     }
     
     @IBAction func previousButtonTapped() {
         if currentAlbumId > 1 {
             currentAlbumId -= 1
         }
-        setupScreen()
+        setupVideosList()
     }
     
 }
