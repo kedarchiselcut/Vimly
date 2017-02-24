@@ -66,6 +66,29 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         getVideos()
     }
     
+    func setupCell(videoCell: VideoTableViewCell, withDataObject videoObject: Dictionary<String, Any>) {
+        videoCell.videoTitleTextView.text = videoObject[titleKey] as? String
+        videoCell.usernameLabel.text = videoObject[usernameKey] as? String
+        videoCell.uploadDateLabel.text = videoObject[uploadDateKey] as? String
+        
+        setupCellImage(forImageView: videoCell.videoThumbnailImage, withUrl: videoObject[videoThumbnailKey] as! String, andPlaceholder: UIImage(named: "placeholder-video.png")!)
+        setupCellImage(forImageView: videoCell.userThumbnailImage, withUrl: videoObject[userThumbnailKey] as! String, andPlaceholder: UIImage(named: "placeholder-profile.png")!)
+    }
+    
+    func setupCellImage(forImageView cellImageView: UIImageView, withUrl imageUrlString: String, andPlaceholder placeholderImage: UIImage) {
+        let imageUrl = URL(string: imageUrlString)!
+        let imageFilter = AspectScaledToFillSizeWithRoundedCornersFilter(
+            size: cellImageView.frame.size,
+            radius: 0.0
+        )
+        cellImageView.af_setImage(
+            withURL: imageUrl,
+            placeholderImage: placeholderImage,
+            filter: imageFilter,
+            imageTransition: .crossDissolve(0.2)
+        )
+    }
+    
     // MARK: UITableViewDataSource
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -84,37 +107,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let videoCell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier, for: indexPath) as! VideoTableViewCell
         if videosArray != nil {
             let videoObject: Dictionary<String, Any> = videosArray[indexPath.row] as! Dictionary<String, Any>
-            
-            videoCell.videoTitleTextView.text = videoObject[titleKey] as? String
-            videoCell.usernameLabel.text = videoObject[usernameKey] as? String
-            videoCell.uploadDateLabel.text = videoObject[uploadDateKey] as? String
-            
-            let videoUrl = URL(string: videoObject[videoThumbnailKey] as! String)!
-            let videoPlaceholderImage = UIImage(named: "placeholder-video.png")!
-            let videoFilter = AspectScaledToFillSizeWithRoundedCornersFilter(
-                size: videoCell.videoThumbnailImage.frame.size,
-                radius: 0.0
-            )
-            videoCell.videoThumbnailImage.af_setImage(
-                withURL: videoUrl,
-                placeholderImage: videoPlaceholderImage,
-                filter: videoFilter,
-                imageTransition: .crossDissolve(0.2)
-            )
-            
-            let profileUrl = URL(string: videoObject[userThumbnailKey] as! String)!
-            let profilePlaceholderImage = UIImage(named: "placeholder-profile.png")!
-            let profileFilter = AspectScaledToFillSizeWithRoundedCornersFilter(
-                size: videoCell.userThumbnailImage.frame.size,
-                radius: 0.0
-            )
-            videoCell.userThumbnailImage.af_setImage(
-                withURL: profileUrl,
-                placeholderImage: profilePlaceholderImage,
-                filter: profileFilter,
-                imageTransition: .crossDissolve(0.2)
-            )
-
+            setupCell(videoCell: videoCell, withDataObject: videoObject)
         }
         
         return videoCell
