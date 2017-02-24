@@ -1,0 +1,6 @@
+framework module Pods_VimlyUITests {
+  umbrella header "Pods-VimlyUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -14,6 +14,9 @@
 		18EBEFE11E5FDDBC0030A066 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18EBEFDF1E5FDDBC0030A066 /* LaunchScreen.storyboard */; };
 		18EBEFEC1E5FDDBC0030A066 /* VimlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBEFEB1E5FDDBC0030A066 /* VimlyTests.swift */; };
 		18EBEFF71E5FDDBC0030A066 /* VimlyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBEFF61E5FDDBC0030A066 /* VimlyUITests.swift */; };
+		41F3A3628771920AB39906F3 /* Pods_Vimly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D332AE7DEF9CED5D92641B57 /* Pods_Vimly.framework */; };
+		630ED1296BA99E2B9B96EBCC /* Pods_VimlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B03DF196C9D08B24428AFF8 /* Pods_VimlyTests.framework */; };
+		D422C6904E20945B7BB698A1 /* Pods_VimlyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3E0AA38F660F8885C097FAB /* Pods_VimlyUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,15 @@
 		18EBEFF21E5FDDBC0030A066 /* VimlyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VimlyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18EBEFF61E5FDDBC0030A066 /* VimlyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VimlyUITests.swift; sourceTree = "<group>"; };
 		18EBEFF81E5FDDBC0030A066 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AB2C71C7B3123A82B491C15 /* Pods-VimlyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VimlyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VimlyTests/Pods-VimlyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		255188E9E0B7BA2F4C744CB6 /* Pods-Vimly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vimly.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Vimly/Pods-Vimly.debug.xcconfig"; sourceTree = "<group>"; };
+		27017DFDAAEB1EF3E93FAAE7 /* Pods-Vimly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vimly.release.xcconfig"; path = "Pods/Target Support Files/Pods-Vimly/Pods-Vimly.release.xcconfig"; sourceTree = "<group>"; };
+		567A759D73B088FCDD96BF67 /* Pods-VimlyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VimlyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VimlyTests/Pods-VimlyTests.release.xcconfig"; sourceTree = "<group>"; };
+		5B03DF196C9D08B24428AFF8 /* Pods_VimlyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VimlyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CE4AD77CD4047102ACBFE4E /* Pods-VimlyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VimlyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VimlyUITests/Pods-VimlyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CA1A9A83DBCE21B2272CD640 /* Pods-VimlyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VimlyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VimlyUITests/Pods-VimlyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D332AE7DEF9CED5D92641B57 /* Pods_Vimly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vimly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3E0AA38F660F8885C097FAB /* Pods_VimlyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VimlyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41F3A3628771920AB39906F3 /* Pods_Vimly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				630ED1296BA99E2B9B96EBCC /* Pods_VimlyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D422C6904E20945B7BB698A1 /* Pods_VimlyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +96,8 @@
 				18EBEFEA1E5FDDBC0030A066 /* VimlyTests */,
 				18EBEFF51E5FDDBC0030A066 /* VimlyUITests */,
 				18EBEFD41E5FDDBB0030A066 /* Products */,
+				619F224323BF4DB0E3A48836 /* Pods */,
+				1FC531858EC08CC07C410A18 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +142,29 @@
 			path = VimlyUITests;
 			sourceTree = "<group>";
 		};
+		1FC531858EC08CC07C410A18 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D332AE7DEF9CED5D92641B57 /* Pods_Vimly.framework */,
+				5B03DF196C9D08B24428AFF8 /* Pods_VimlyTests.framework */,
+				F3E0AA38F660F8885C097FAB /* Pods_VimlyUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		619F224323BF4DB0E3A48836 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				255188E9E0B7BA2F4C744CB6 /* Pods-Vimly.debug.xcconfig */,
+				27017DFDAAEB1EF3E93FAAE7 /* Pods-Vimly.release.xcconfig */,
+				1AB2C71C7B3123A82B491C15 /* Pods-VimlyTests.debug.xcconfig */,
+				567A759D73B088FCDD96BF67 /* Pods-VimlyTests.release.xcconfig */,
+				7CE4AD77CD4047102ACBFE4E /* Pods-VimlyUITests.debug.xcconfig */,
+				CA1A9A83DBCE21B2272CD640 /* Pods-VimlyUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18EBEFFB1E5FDDBC0030A066 /* Build configuration list for PBXNativeTarget "Vimly" */;
 			buildPhases = (
+				6F4B3A9713B68C34CCEF0112 /* [CP] Check Pods Manifest.lock */,
 				18EBEFCF1E5FDDBB0030A066 /* Sources */,
 				18EBEFD01E5FDDBB0030A066 /* Frameworks */,
 				18EBEFD11E5FDDBB0030A066 /* Resources */,
+				5757C922C8F91D65B9917B68 /* [CP] Embed Pods Frameworks */,
+				6FA55159B9BB515E161164A3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18EBEFFE1E5FDDBC0030A066 /* Build configuration list for PBXNativeTarget "VimlyTests" */;
 			buildPhases = (
+				1EAB2A598CAE09165A9AD2B4 /* [CP] Check Pods Manifest.lock */,
 				18EBEFE31E5FDDBC0030A066 /* Sources */,
 				18EBEFE41E5FDDBC0030A066 /* Frameworks */,
 				18EBEFE51E5FDDBC0030A066 /* Resources */,
+				0413825C683CCD080C26D7A0 /* [CP] Embed Pods Frameworks */,
+				C25C70F9C3301EDA8E125D12 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18EBF0011E5FDDBC0030A066 /* Build configuration list for PBXNativeTarget "VimlyUITests" */;
 			buildPhases = (
+				C0534C5C3CEB84575D15FC2C /* [CP] Check Pods Manifest.lock */,
 				18EBEFEE1E5FDDBC0030A066 /* Sources */,
 				18EBEFEF1E5FDDBC0030A066 /* Frameworks */,
 				18EBEFF01E5FDDBC0030A066 /* Resources */,
+				4F6DC5F502ABA0A05F1E08C2 /* [CP] Embed Pods Frameworks */,
+				0918C4BCD288F61CA2AD4637 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,6 +305,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0413825C683CCD080C26D7A0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VimlyTests/Pods-VimlyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0918C4BCD288F61CA2AD4637 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VimlyUITests/Pods-VimlyUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1EAB2A598CAE09165A9AD2B4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4F6DC5F502ABA0A05F1E08C2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VimlyUITests/Pods-VimlyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5757C922C8F91D65B9917B68 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Vimly/Pods-Vimly-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F4B3A9713B68C34CCEF0112 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6FA55159B9BB515E161164A3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Vimly/Pods-Vimly-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0534C5C3CEB84575D15FC2C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C25C70F9C3301EDA8E125D12 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VimlyTests/Pods-VimlyTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		18EBEFCF1E5FDDBB0030A066 /* Sources */ = {
@@ -413,6 +600,7 @@
 		};
 		18EBEFFC1E5FDDBC0030A066 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 255188E9E0B7BA2F4C744CB6 /* Pods-Vimly.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FT643X537X;
@@ -420,12 +608,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chiselcut.Vimly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		18EBEFFD1E5FDDBC0030A066 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27017DFDAAEB1EF3E93FAAE7 /* Pods-Vimly.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FT643X537X;
@@ -433,12 +623,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chiselcut.Vimly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		18EBEFFF1E5FDDBC0030A066 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AB2C71C7B3123A82B491C15 /* Pods-VimlyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -454,6 +646,7 @@
 		};
 		18EBF0001E5FDDBC0030A066 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 567A759D73B088FCDD96BF67 /* Pods-VimlyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -469,6 +662,7 @@
 		};
 		18EBF0021E5FDDBC0030A066 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CE4AD77CD4047102ACBFE4E /* Pods-VimlyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = FT643X537X;
@@ -483,6 +677,7 @@
 		};
 		18EBF0031E5FDDBC0030A066 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA1A9A83DBCE21B2272CD640 /* Pods-VimlyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = FT643X537X;
@@ -514,6 +709,7 @@
 				18EBEFFD1E5FDDBC0030A066 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18EBEFFE1E5FDDBC0030A066 /* Build configuration list for PBXNativeTarget "VimlyTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +718,7 @@
 				18EBF0001E5FDDBC0030A066 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18EBF0011E5FDDBC0030A066 /* Build configuration list for PBXNativeTarget "VimlyUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +727,7 @@
 				18EBF0031E5FDDBC0030A066 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
