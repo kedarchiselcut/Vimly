@@ -27,7 +27,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let cellNib = UINib(nibName: "VideoTableViewCell", bundle: nil)
         videosTableView.register(cellNib, forCellReuseIdentifier: CellIdentifier)
-        
     }
 
     override func didReceiveMemoryWarning() {

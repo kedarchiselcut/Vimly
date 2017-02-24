@@ -39,7 +39,8 @@ class VideoTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        descriptionHeight = descriptionLabel.sizeThatFits(CGSize(width: descriptionLabel.frame.size.width, height: CGFloat.greatestFiniteMagnitude)).height
-        descriptionLabel.frame = CGRect(x: descriptionLabel.frame.origin.x, y: videoThumbnailImage.frame.origin.y + videoThumbnailImage.frame.size.height + CGFloat(descriptionLabelMargin), width: descriptionLabel.frame.size.width, height: descriptionHeight)
+        let descriptionWidth: CGFloat = self.frame.size.width - 2*CGFloat(descriptionLabelMargin)
+        descriptionHeight = descriptionLabel.sizeThatFits(CGSize(width: descriptionWidth, height: CGFloat.greatestFiniteMagnitude)).height
+        descriptionLabel.frame = CGRect(x: descriptionLabel.frame.origin.x, y: videoThumbnailImage.frame.origin.y + videoThumbnailImage.frame.size.height + CGFloat(descriptionLabelMargin), width: descriptionWidth, height: descriptionHeight)
     }
 }
