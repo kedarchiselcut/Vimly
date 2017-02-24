@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import AlamofireImage
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -21,6 +22,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         setupScreen()
+        
+        let cellNib = UINib(nibName: "VideoTableViewCell", bundle: nil)
+        videosTableView.register(cellNib, forCellReuseIdentifier: CellIdentifier)
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,8 +57,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func setupScreen() {
         if (videosArray != nil) {
-            videosTableView.scrollToRow(at: IndexPath.init(row: 0, section: 0), at: UITableViewScrollPosition.top, animated: true)
             videosArray.removeAll()
+            videosTableView.reloadData()
         }
         currentPageNumber = 1
 
@@ -77,7 +81,43 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             getVideos()
         }
 
-        return UITableViewCell.init()
+        let videoCell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier, for: indexPath) as! VideoTableViewCell
+        if videosArray != nil {
+            let videoObject: Dictionary<String, Any> = videosArray[indexPath.row] as! Dictionary<String, Any>
+            
+            videoCell.videoTitleTextView.text = videoObject[titleKey] as? String
+            videoCell.usernameLabel.text = videoObject[usernameKey] as? String
+            videoCell.uploadDateLabel.text = videoObject[uploadDateKey] as? String
+            
+            let videoUrl = URL(string: videoObject[videoThumbnailKey] as! String)!
+            let videoPlaceholderImage = UIImage(named: "placeholder-video.png")!
+            let videoFilter = AspectScaledToFillSizeWithRoundedCornersFilter(
+                size: videoCell.videoThumbnailImage.frame.size,
+                radius: 0.0
+            )
+            videoCell.videoThumbnailImage.af_setImage(
+                withURL: videoUrl,
+                placeholderImage: videoPlaceholderImage,
+                filter: videoFilter,
+                imageTransition: .crossDissolve(0.2)
+            )
+            
+            let profileUrl = URL(string: videoObject[userThumbnailKey] as! String)!
+            let profilePlaceholderImage = UIImage(named: "placeholder-profile.png")!
+            let profileFilter = AspectScaledToFillSizeWithRoundedCornersFilter(
+                size: videoCell.userThumbnailImage.frame.size,
+                radius: 0.0
+            )
+            videoCell.userThumbnailImage.af_setImage(
+                withURL: profileUrl,
+                placeholderImage: profilePlaceholderImage,
+                filter: profileFilter,
+                imageTransition: .crossDissolve(0.2)
+            )
+
+        }
+        
+        return videoCell
     }
     
     // MARK: UITableViewDelegate

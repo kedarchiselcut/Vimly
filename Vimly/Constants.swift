@@ -11,4 +11,10 @@ import Foundation
 let pageKey = "page"
 let baseUrl = "http://vimeo.com/api/v2/"
 let methodName = "album/%d/videos.json"
+let CellIdentifier = "videoCellId"
+let titleKey = "title"
+let videoThumbnailKey = "thumbnail_large"
+let userThumbnailKey = "user_portrait_medium"
+let usernameKey = "user_name"
+let uploadDateKey = "upload_date"
 let cellHeight = 160
